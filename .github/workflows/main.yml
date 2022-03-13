@@ -27,13 +27,13 @@ jobs:
           node-version: 14.17
 
       - name: Install Dependencies
-        run: npm install
+        run: yarn install
 
       - name: Build App
-        run: npm run build
-      
-      - name: Semantic Reales
+        run: yarn build
+
+      - name: Semantic Release
         env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
-          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
