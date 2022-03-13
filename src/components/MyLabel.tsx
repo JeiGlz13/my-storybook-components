@@ -49,9 +49,12 @@ export const MyLabel = ({
     ${allCaps&&'allCapsLock'} text-${color} `}
     style = {{
       color: fontColor,
-      backgroundColor
+      backgroundColor,
+      borderRadius: '7px',
       }} >
         {label}
     </span>
   )
 }
+
+export default MyLabel;
