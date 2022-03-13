@@ -25,6 +25,11 @@ export interface MyLabelProps {
      * Select a Hex color
      */
     fontColor?: string;
+
+    /**
+     * Choose de background color
+     */
+      backgroundColor?: string;
 }
 
 /**
@@ -36,12 +41,16 @@ export const MyLabel = ({
     color = 'primary',
     label = 'no label', 
     size = 'normal', 
-    fontColor
+    fontColor,
+    backgroundColor = 'transparent'
 }: MyLabelProps ) => {
   return (
     <span className={`label ${size} 
     ${allCaps&&'allCapsLock'} text-${color} `}
-    style = {{color: fontColor}} >
+    style = {{
+      color: fontColor,
+      backgroundColor
+      }} >
         {label}
     </span>
   )
