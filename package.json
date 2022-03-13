@@ -35,7 +35,7 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "npm run clean && tsc && npm run copy-files",
+    "build": "yarn clean && tsc && yarn copy-files",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=66a44030f846",
